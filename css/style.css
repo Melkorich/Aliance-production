@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-    /* padding-top: 94px; */
+    padding-top: 94px;
     min-height: 100vh;
 }
 
@@ -44,12 +44,11 @@ body {
 }
 
 .navbar {
-    /* position: fixed;
-    z-index: 99; */
+    position: fixed;
+    z-index: 99;
     width: 100%;
     display: flex;
     align-items: center;
-    position: relative;
     height: 94px;
     border-bottom: 1px solid rgba(235, 235, 240, 0.2);
 }
