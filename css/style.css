@@ -4,21 +4,25 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     color: #292D33;
     line-height: 1.625;
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 90rem;
     margin: 0 auto;
 }
 
 .header {
-    padding-top: 94px;
+    padding-top: 5.875rem;
     min-height: 100vh;
 }
 
@@ -26,7 +30,7 @@ body {
     background-image: url('../images/header-bg.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center bottom -50px;
+    background-position: center bottom -3.125rem;
     position: relative;
 }
 
@@ -49,13 +53,13 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    height: 94px;
+    height: 5.875rem;
     border-bottom: 1px solid rgba(235, 235, 240, 0.2);
     transition: background-color 0.2s, height 0.2s;
 }
 
 .navbar--light {
-    height: 74px;
+    height: 4.625rem;
     background-color: #fff;
 }
 
@@ -67,13 +71,18 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    padding: 0px 50px;
+    padding: 0px 3.125rem;
     border-right: 1px solid rgba(235, 235, 240, 0.2);
     height: 100%;
 }
 
+.logo-svg {
+    width: 9rem;
+    height: 2.75rem;
+}
+
 .header-nav {
-    padding: 0 45px;
+    padding: 0 2.8125rem;
     display: flex;
     flex-basis: 100%;
     list-style: none;
@@ -89,15 +98,15 @@ body {
 }
 
 .header-nav__item:not(:last-child) {
-    margin-right: 50px;
+    margin-right: 3.125rem;
 }
 
 .header__phone {
-    margin-right: 50px;
+    margin-right: 3.125rem;
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: .625rem;
 }
 
 .header-phone__link {
@@ -119,8 +128,8 @@ body {
 
 .button {
     font-weight: 600;
-    padding: 25px 49px;
-    font-size: 16px;
+    padding: 1.5625rem 3.0625rem;
+    font-size: 1rem;
     line-height: 1.625;
     background-color: #5C8EE6;
     color: #fff;
@@ -134,51 +143,51 @@ body {
 }
 
 .separator {
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
     width: 150px;
     height: 2px;
     background-color: #5C8EE6;
 }
 
 .header__content {
-    padding: 150px 0 100px;
+    padding: 9.375rem 0 6.25rem;
     position: relative;
     z-index: 1;
     color: #fff;
 }
 
 .header__title {
-    margin-bottom: 36px;
-    max-width: 1080px;
-    font-size: 80px;
+    margin-bottom: 2.25rem;
+    max-width: 67.5rem;
+    font-size: 5rem;
     line-height: 1.2;
     font-family: 'Bebas Neue Book';
 
-    letter-spacing: 0.8px;
+    letter-spacing: .05rem;
     /* word-spacing: -1.6px; */
 }
 
 .header__text {
-    margin-bottom: 50px;
-    max-width: 720px;
+    margin-bottom: 3.125rem;
+    max-width: 45rem;
 }
 
 .header__btn {
-    padding: 25px 60px;
-    min-width: 313px;
+    padding: 1.5625rem 3.75rem;
+    min-width: 19.5625rem;
 }
 
 .header-features {
     display: flex;
     position: relative;
     color: #fff;
-    min-height: 168px;
+    min-height: 10.5rem;
     list-style: none;
 }
 
 .header-features__item {
-    padding: 33px 50px 30px 50px;
-    width: 288px;
+    padding: 2.0625rem 3.125rem 1.875rem 3.125rem;
+    width: 18rem;
     border: 1px solid rgba(235, 235, 240, 0.2);
 }
 
@@ -188,52 +197,52 @@ body {
 
 .header-features__img {
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 /* work cheme */
 
 .work-cheme {
-    padding: 150px 0 100px;
+    padding: 9.375rem 0 6.25rem;
 }
 
 .work-cheme__title {
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 
 .section-title {
     font-family: 'Bebas Neue Book';
-    font-size: 60px;
+    font-size: 3.75rem;
     line-height: 1.2;
 }
 
 .work-cheme__list {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 1.875rem;
 }
 
 .work-cheme__item {
-    max-width: 330px;
+    max-width: 20.625rem;
 }
 
 .work-cheme__item:nth-child(3) .work-cheme__text {
-    padding-right: 26px;
+    padding-right: 1.625rem;
 }
 
 .work-cheme__item:nth-child(4) .work-cheme__text {
-    padding-right: 29px;
+    padding-right: 1.8125rem;
 }
 
 .work-cheme__num {
     position: relative;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 1.2;
     color: #5C8EE6;
     font-family: 'Bebas Neue Book';
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .work-cheme__num::after {
@@ -242,30 +251,30 @@ body {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    width: 260px;
-    height: 1px;
+    width: 16.25rem;
+    height: .0625rem;
     background-color: #EBEBF0;
 }
 
 .work-cheme__suntitle {
-    max-width: 250px;
-    font-size: 28px;
+    max-width: 15.625rem;
+    font-size: 1.75rem;
     line-height: 1.6;
-    margin-bottom: 14px;
+    margin-bottom: .875rem;
     font-weight: 400;
 }
 
 
 .work-cheme__text {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: #828A99;
 }
 
 .work-cheme__link {
-    padding-left: 60px;
+    padding-left: 3.75rem;
     position: relative;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     color: #5C8EE6;
     text-decoration: none;
 }
@@ -276,7 +285,57 @@ body {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 1px;
-    width: 40px;
+    height: .0625rem;
+    width: 2.5rem;
     background-color: #5C8EE6;
+}
+
+
+@media (max-width: 1700px) {
+    html {
+        font-size: 14px;
+    }
+
+    .header__image {
+        background-position: center;
+    }
+}
+
+
+@media (max-width: 1540px) {
+    .logo {
+        padding: 0px .9375rem;
+    }
+
+    .header-nav {
+        padding: 0 0 0 1.25rem;
+    }
+
+    .header-nav__item:not(:last-child) {
+        margin-right: 1.875rem;
+    }
+
+    .header-nav__link {
+        font-size: .875rem;
+    }
+
+    .header__phone {
+        margin-right: 1.875rem;
+    }
+
+    .navbar__btn {
+        flex-shrink: 1;
+        font-size: .875rem;
+    }
+
+    .header-phone__link {
+        font-size: .875rem;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .header__content {
+        padding: 8.375rem .625rem 5.25rem .625rem;
+    }
 }
