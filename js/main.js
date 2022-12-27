@@ -10,3 +10,13 @@ window.addEventListener('scroll', () => {
         logo.href.baseVal = "images/sprite.svg#logo-light";
     }
 })
+
+const mobileMenuBtn = document.querySelector('.mobile-nav');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+
+mobileMenuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    mobileMenu.classList.toggle('is-open');
+    mobileMenuBtn.classList.toggle('mobile-nav--active');
+})
