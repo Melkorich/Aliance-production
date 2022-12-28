@@ -125,6 +125,7 @@ body {
     height: 1px;
     width: 100%;
     background-color: #fff;
+    transition: transform 0.2s, rotate 0.2s;
 }
 
 .mobile-nav__line:nth-child(2) {
@@ -133,6 +134,19 @@ body {
 
 .mobile-nav--active .mobile-nav__line {
     background-color: #292D33;
+    transition: transform 0.2s, rotate 0.2s;
+}
+
+.mobile-nav--active .mobile-nav__line:nth-child(2) {
+    display: none;
+}
+
+.mobile-nav--active .mobile-nav__line:nth-child(1) {
+    transform: rotate(45deg) translateY(17px);
+}
+
+.mobile-nav--active .mobile-nav__line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-18px);
 }
 
 
