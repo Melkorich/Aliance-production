@@ -1,15 +1,18 @@
 const navbar = document.querySelector('.navbar');
-const logo = document.querySelector('.logo-svg use');
+const logoLight = document.querySelector('.logo-light');
+const logoDark = document.querySelector('.logo-dark');
 
 
 const lightModeOn = () => {
     navbar.classList.add('navbar--light');
-    logo.href.baseVal = "images/sprite.svg#logo-dark";
+    logoDark.style.display = "block";
+    logoLight.style.display = "none";
 }
 
 const lightModeOff = () => {
     navbar.classList.remove('navbar--light')
-    logo.href.baseVal = "images/sprite.svg#logo-light";
+    logoDark.style.display = "none";
+    logoLight.style.display = "block";
 }
 
 window.addEventListener('scroll', () => {
@@ -44,7 +47,7 @@ mobileMenuBtn.addEventListener('click', (e) => {
 
 const swiper = new Swiper('.swiper', {
     speed: 400,
-    autoHeight: true,
+    // autoHeight: true,
 
     slidesPerView: 5,
     grabCursor: true,

@@ -204,6 +204,10 @@ body {
     height: 100%;
 }
 
+.logo-dark {
+    display: none;
+}
+
 .logo-svg {
     width: 9rem;
     height: 2.75rem;
@@ -329,12 +333,16 @@ body {
 .header-features__item {
     padding: 2.0625rem 3.125rem 1.875rem 3.125rem;
     width: 18rem;
-    min-height: 100%;
+    height: auto !important;
     border: 1px solid rgba(235, 235, 240, 0.2);
 }
 
 .header-features__item:not(:last-child) {
     /* border-right: none; */
+}
+
+.header-features__text {
+    height: 100%;
 }
 
 .header-features__img {
