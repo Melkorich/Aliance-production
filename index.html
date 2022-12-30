@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/normilize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -169,7 +170,55 @@
                 </button>
             </div>
 
-            <ul class="header__features header-features">
+            <div class="swiper">
+                <ul class="swiper-wrapper header-features">
+                    <li class="swiper-slide header-features__item">
+                        <img class="header-features__img" src="images/features/1.png" alt="">
+                        <p class="header-features__text">
+                            Непрерывная работа c 2017 года
+                        </p>
+                    </li>
+                    <li class="swiper-slide header-features__item">
+                        <img class="header-features__img" src="images/features/2.png" alt="">
+                        <p class="header-features__text">
+                            Вся продукция сертифицирована
+                        </p>
+                    </li>
+                    <li class="swiper-slide header-features__item">
+                        <img class="header-features__img" src="images/features/3.png" alt="">
+                        <p class="header-features__text">
+                            Контроль качества на всех этапах
+                        </p>
+                    </li>
+                    <li class="swiper-slide header-features__item">
+                        <img class="header-features__img" src="images/features/4.png" alt="">
+                        <p class="header-features__text">
+                            Возможны поставки по всей России
+                        </p>
+                    </li>
+                    <li class="swiper-slide header-features__item">
+                        <img class="header-features__img" src="images/features/5.png" alt="">
+                        <p class="header-features__text">
+                            Оперативное производство
+                        </p>
+                    </li>
+                </ul>
+
+                <div class="slider-buttons">
+                    <div class="slider-button-prev">
+                        <svg width="36" height="24">
+                            <use href='images/sprite.svg#arrow-prev'></use>
+                        </svg>
+                    </div>
+                    <div class="slider-button-next">
+                        <svg width="36" height="24">
+                            <use href='images/sprite.svg#arrow-next'></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <ul class="header__features header-features">
                 <li class="header-features__item">
                     <img class="header-features__img" src="images/features/1.png" alt="">
                     <p class="header-features__text">
@@ -200,13 +249,13 @@
                         Оперативное производство
                     </p>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </header>
 
     <main class="main">
 
-        <section class="work-cheme">
+        <!-- <section class="work-cheme">
             <div class="container">
                 <div class="separator"></div>
                 <h2 class="work-cheme__title section-title">
@@ -254,11 +303,11 @@
                     </li>
                 </ol>
             </div>
-        </section>
+        </section> -->
 
     </main>
 
-
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

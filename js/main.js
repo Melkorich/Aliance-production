@@ -40,3 +40,40 @@ mobileMenuBtn.addEventListener('click', (e) => {
     e.preventDefault();
     mobileMenu.classList.contains('is-open') ? closeMenu() : openMenu();
 })
+
+
+const swiper = new Swiper('.swiper', {
+    speed: 400,
+    autoHeight: true,
+
+    slidesPerView: 5,
+    grabCursor: true,
+
+    navigation: {
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev',
+    },
+
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            loop: true,
+        },
+        // when window width is >= 480px
+        560: {
+            slidesPerView: 2,
+        },
+        // when window width is >= 640px
+        800: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 5,
+            loop: false,
+        }
+    }
+});
