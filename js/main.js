@@ -84,7 +84,7 @@ const workSchemeSlider = new Swiper('.work-cheme__slider', {
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.1,
         },
         // when window width is >= 480px
         560: {

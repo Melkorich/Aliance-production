@@ -514,6 +514,17 @@ body {
     cursor: pointer;
 }
 
+
+/*produc tion*/
+
+.production {
+    padding: 2rem 0;
+}
+
+.production__title {
+    margin-bottom: 3.125rem;
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -693,10 +704,15 @@ body {
         flex-grow: 1;
         justify-content: center;
         border-right: none;
+        padding: 0;
     }
 
     .navbar__btn {
-        min-width: 5rem;
+        min-width: 6.5rem;
+    }
+
+    .logo-svg {
+        max-width: 10rem;
     }
 
     .mobile-nav {
@@ -717,15 +733,52 @@ body {
 
 @media (max-width: 560px) {
     .container {
-        max-width: 90%;
+        max-width: 100%;
+        padding: 0 13px;
     }
 
-    .header__title {
-        font-size: 2.5rem;
+    .mobile-nav {
+        padding: 2.2rem;
+    }
+
+    .separator {
+        margin-bottom: 1.7rem;
+        width: 94px;
     }
 
     .header__content {
-        padding: 2.5rem 0 5rem;
+        padding: 3.8rem 0 4rem;
+    }
+
+    .header__title {
+        margin-bottom: 1rem;
+    }
+
+    .header__text {
+        margin-bottom: 2.4rem;
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 28rem;
+    }
+
+    .header__btn {
+        padding: 1.5625rem 3rem;
+        min-width: 100%;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .header-features__img {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .work-cheme {
+        padding: 8.375rem 0 6.25rem;
     }
 
     .work-cheme__list {
@@ -738,4 +791,48 @@ body {
         max-width: 100%;
         padding: 0 10px;
     }
+
+    .work-cheme__num {
+        font-size: 4rem;
+        margin-bottom: 0.875rem;
+    }
+
+    .work-cheme__title {
+        margin-bottom: 2.125rem;
+    }
+
+    .work-cheme__suntitle {
+        margin-bottom: 0.8rem;
+        font-size: 1.67rem;
+    }
+
+    .work-cheme__text {
+        margin-bottom: 2rem;
+        font-size: 14px;
+        line-height: 160%;
+    }
+
+    .work-cheme__link {
+        padding-left: 4.75rem;
+        font-size: 1.2rem;
+    }
+
+    .work-cheme__buttons {
+        margin-top: 19px;
+    }
+
+    .production__title {
+        font-size: 3rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .card__title {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    .card__content {
+        padding: 1.25rem 1.875rem;
+    }
+
 }
