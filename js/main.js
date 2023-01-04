@@ -45,11 +45,7 @@ mobileMenuBtn.addEventListener('click', (e) => {
 })
 
 
-const swiper = new Swiper('.swiper', {
-    speed: 400,
-    // autoHeight: true,
-
-    slidesPerView: 5,
+const swiperHeader = new Swiper('.header-slider', {
     grabCursor: true,
 
     navigation: {
@@ -60,7 +56,7 @@ const swiper = new Swiper('.swiper', {
     breakpoints: {
         // when window width is >= 320px
         320: {
-            slidesPerView: 1,
+            slidesPerView: 1.5,
             loop: true,
         },
         // when window width is >= 480px
@@ -80,3 +76,31 @@ const swiper = new Swiper('.swiper', {
         }
     }
 });
+
+const workSchemeSlider = new Swiper('.work-cheme__slider', {
+    grabCursor: true,
+    loop: true,
+
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1.5,
+        },
+        // when window width is >= 480px
+        560: {
+            slidesPerView: 2,
+        },
+        // when window width is >= 640px
+        800: {
+            slidesPerView: 3,
+        },
+        1200: {
+            slidesPerView: 4,
+        }
+    },
+
+    navigation: {
+        nextEl: '.work-cheme-button-next',
+        prevEl: '.work-cheme-button-prev',
+    },
+})

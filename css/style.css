@@ -231,11 +231,40 @@ body {
     display: flex;
     flex-basis: 100%;
     list-style: none;
+    height: 100%;
+    align-items: center;
+}
+
+.header-nav__item {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .header-nav__link {
+    position: relative;
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.header-nav__link:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    transform: scaleX(0);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.header-nav__link:hover::before {
+    background-color: #5C8EE6;
+    transform: scaleX(1);
 }
 
 .navbar--light .header-nav__link {
@@ -366,11 +395,6 @@ body {
     justify-content: center;
 }
 
-
-.slider-button-prev {}
-
-.slider-button-next {}
-
 /* work cheme */
 
 .work-cheme {
@@ -391,10 +415,12 @@ body {
     display: flex;
     list-style: none;
     gap: 1.875rem;
+    min-width: 0px;
 }
 
 .work-cheme__item {
     max-width: 20.625rem;
+    min-width: 0px;
 }
 
 .work-cheme__item:nth-child(3) .work-cheme__text {
@@ -448,6 +474,11 @@ body {
     font-size: 1rem;
     color: #5C8EE6;
     text-decoration: none;
+    transition: padding-left 0.2s;
+}
+
+.work-cheme__link:hover {
+    padding-left: 4.375rem;
 }
 
 .work-cheme__link::before {
@@ -459,6 +490,79 @@ body {
     height: .0625rem;
     width: 2.5rem;
     background-color: #5C8EE6;
+    transition: width 0.2s;
+}
+
+.work-cheme__link:hover::before {
+    width: 3.75rem;
+}
+
+.work-cheme__buttons {
+    display: none;
+    height: 40px;
+    justify-content: flex-end;
+}
+
+.work-cheme-button-prev,
+.work-cheme-button-next {
+    background-color: #5C8EE6;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    flex-basis: 33%;
+    border: 1px solid #EBEBF0;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.2s;
+}
+
+.card:hover .card__title {
+    color: #5C8EE6;
+}
+
+.card:hover {
+    border-color: #5C8EE6;
+}
+
+.card__content {
+    padding: 2.5rem 3.125rem;
+}
+
+.card__title {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #292D33;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    transition: color 0.2s;
+}
+
+.card__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #828A99;
+    margin-bottom: 24.625rem;
+}
+
+.card__image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: 0;
 }
 
 
@@ -532,6 +636,15 @@ body {
     .slider-buttons {
         display: flex;
     }
+
+    .work-cheme__buttons {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .card {
+        flex-basis: 50%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -565,8 +678,11 @@ body {
     .header__content {
         padding: 3rem 0 5.25rem;
     }
-}
 
+    .card {
+        flex-basis: 100%;
+    }
+}
 
 @media (max-width: 800px) {
     .header-nav {
@@ -610,5 +726,16 @@ body {
 
     .header__content {
         padding: 2.5rem 0 5rem;
+    }
+
+    .work-cheme__list {
+        gap: 0px;
+        margin: 0 -10px;
+        width: 100%;
+    }
+
+    .work-cheme__item {
+        max-width: 100%;
+        padding: 0 10px;
     }
 }
