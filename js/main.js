@@ -104,3 +104,19 @@ const workSchemeSlider = new Swiper('.work-cheme__slider', {
         prevEl: '.work-cheme-button-prev',
     },
 })
+
+
+const blogSlider = new Swiper('.blog-slider', {
+    grabCursor: true,
+    loop: true,
+
+    slidesPerView: 2,
+    spaceBetween: 30,
+
+    navigation: {
+        nextEl: '.blog-button-next',
+        prevEl: '.blog-button-prev',
+    },
+
+});
+
