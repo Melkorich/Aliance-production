@@ -120,3 +120,18 @@ const blogSlider = new Swiper('.blog-slider', {
 
 });
 
+
+const modal = document.querySelector('.modal');
+const modalToggle = document.querySelectorAll('[data-toggle=modal]')
+const closeModal = document.querySelector('.modal__close');
+
+
+modalToggle.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        modal.classList.add('is-open');
+    })
+})
+
+closeModal.addEventListener('click', () => {
+    modal.classList.remove('is-open');
+})

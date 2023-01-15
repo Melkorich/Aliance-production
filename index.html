@@ -148,7 +148,7 @@
             </svg>
             <a class="header-phone__link" href="tel:+74996861014">+7 (499) 686-10-14</a>
         </div>
-        <button class="navbar__btn button" type="button">
+        <button class="navbar__btn button" type="button" data-toggle="modal">
             <svg class="navbar__btn-icon" width="24" height="24">
                 <use href="images/sprite.svg#phone"></use>
             </svg>
@@ -168,7 +168,7 @@
                     факта: высококачественный прототип будущего проекта напрямую зависит от анализа существующих
                     паттернов поведения.
                 </p>
-                <button class="header__btn button">
+                <button class="header__btn button" data-toggle="modal">
                     Подробнее о компании
                 </button>
             </div>
@@ -682,7 +682,6 @@
             </div>
         </div>
 
-
         <div class="footer__bottom">
             <div class="container">
                 <div class="footer__bottom-inner">
@@ -785,6 +784,48 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal">
+        <div class="modal__dialog">
+            <h2 class="modal__title">
+                Есть вопросы?
+            </h2>
+            <a class="modal__close" href="#">
+                <svg class="close-icon" width="24" height="24">
+                    <use href="images/sprite.svg#close"></use>
+                </svg>
+            </a>
+            <p class="modal__text">
+                Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и
+                поможем даже в самых сложных случаях!
+            </p>
+
+            <form class="modal__form" action="#">
+                <div class="input-group__vertical">
+                    <div class="input-group modal__input-group">
+                        <input id="modal-user-name" class="cta-input" type="text" placeholder=" ">
+                        <label class="cta-label modal__label" for="modal-user-name">Имя</label>
+                    </div>
+                    <div class="input-group modal__input-group">
+                        <input id="modal-user-tel" class="cta-input" type="tel" placeholder=" ">
+                        <label class="cta-label modal__label" for="modal-user-tel">Номер телефона</label>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <button class="modal__btn button" type="submit">Отправить заявку</button>
+                    <div class="cta-form__alert modal__alert">
+                        <svg class="cta-icon" width="14" height="14">
+                            <use xlink:href="images/sprite.svg#alert"></use>
+                        </svg>
+                        <p class="modal__text">
+                            Обращаясь к нам вы получаете не только профессиональную работу, но и абсолютную
+                            конфиденциальность информации!
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
