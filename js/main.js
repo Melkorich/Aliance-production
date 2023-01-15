@@ -110,8 +110,14 @@ const blogSlider = new Swiper('.blog-slider', {
     grabCursor: true,
     loop: true,
 
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 30,
+
+    breakpoints: {
+        840: {
+            slidesPerView: 2,
+        },
+    },
 
     navigation: {
         nextEl: '.blog-button-next',
@@ -122,16 +128,36 @@ const blogSlider = new Swiper('.blog-slider', {
 
 
 const modal = document.querySelector('.modal');
+const modalDialog = document.querySelector('.modal__dialog');
 const modalToggle = document.querySelectorAll('[data-toggle=modal]')
 const closeModal = document.querySelector('.modal__close');
 
-
-modalToggle.forEach((el) => {
-    el.addEventListener('click', (e) => {
-        modal.classList.add('is-open');
-    })
+document.addEventListener('click', (e) => {
+    if (
+        e.target.dataset.toggle == 'modal' ||
+        e.target.parentNode.dataset.toggle == 'modal' ||
+        !e.composedPath().includes(modalDialog) && modal.classList.contains('is-open')
+    ) {
+        e.preventDefault();
+        modal.classList.toggle('is-open');
+    }
 })
+
+
+// modalToggle.forEach((el) => {
+//     el.addEventListener('click', (e) => {
+//         modal.classList.add('is-open');
+//     })
+// })
 
 closeModal.addEventListener('click', () => {
     modal.classList.remove('is-open');
 })
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+        modal.classList.remove('is-open');
+    }
+})
+
+
