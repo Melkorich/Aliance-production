@@ -2,21 +2,25 @@ const navbar = document.querySelector('.navbar');
 const logoLight = document.querySelector('.logo-light');
 const logoDark = document.querySelector('.logo-dark');
 
+const isFront = document.body.classList.contains('front-page');
+
+const changeNavHeight = (height) => {
+    navbar.style.height = height;
+}
 
 const lightModeOn = () => {
     navbar.classList.add('navbar--light');
-    logoDark.style.display = "block";
-    logoLight.style.display = "none";
 }
 
 const lightModeOff = () => {
     navbar.classList.remove('navbar--light')
-    logoDark.style.display = "none";
-    logoLight.style.display = "block";
 }
 
 window.addEventListener('scroll', () => {
-    this.scrollY > 1 ? lightModeOn() : lightModeOff();
+    this.scrollY > 1 ? changeNavHeight('4.625rem') : changeNavHeight('5.875rem');
+    if (isFront) {
+        this.scrollY > 1 ? lightModeOn() : lightModeOff();
+    }
 })
 
 
