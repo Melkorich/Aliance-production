@@ -343,7 +343,8 @@ body {
 
 /*breadcrumbs*/
 .breadcrumbs {
-    padding-top: 81.25px;
+    /* padding-top: 81.25px; */
+    transform: translateY(81.25px);
     background-color: #F0F2F5;
     margin-bottom: 6.25rem;
 }
@@ -756,6 +757,10 @@ body {
     background-repeat: no-repeat;
     background-size: 40%;
     background-position: left top; */
+}
+
+.founder--about {
+    padding-top: 100px;
 }
 
 .founder__inner {
