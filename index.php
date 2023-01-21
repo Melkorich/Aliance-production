@@ -623,11 +623,11 @@
                         </p>
                         <div class="cta-form__input-wrapper">
                             <div class="input-group">
-                                <input id="user-name" class="cta-input" type="text" name="username" placeholder=" ">
+                                <input id="user-name" class="cta-input" type="text" name="username" placeholder=" " required maxlength="50">
                                 <label class="cta-label" for="user-name">Имя</label>
                             </div>
                             <div class="input-group">
-                                <input id="user-tel" class="cta-input" type="tel" name="userphone" placeholder=" ">
+                                <input id="user-tel" class="cta-input" type="tel" name="userphone" placeholder=" " required maxlength="20">
                                 <label class="cta-label" for="user-tel">Номер телефона</label>
                             </div>
                         </div>
