@@ -335,7 +335,7 @@
             <div class="cta__bg cta__inner">
                 <img class="cta__image" src="./images/cta/bg.png" alt="call to action">
                 <div class="cta__form-wrapper container">
-                    <form class="cta-form">
+                    <form id="form" class="cta-form" action="handler.php" method="POST">
                         <h2 class="section-title cta-form__title">
                             Хотите сотрудничать?
                         </h2>
@@ -345,11 +345,25 @@
                         </p>
                         <div class="cta-form__input-wrapper">
                             <div class="input-group">
-                                <input id="user-name" class="cta-input" type="text" placeholder=" ">
+                                <input 
+                                id="user-name" 
+                                class="cta-input" 
+                                type="text" 
+                                name="username" 
+                                placeholder=" " 
+                                required 
+                                maxlength="50">
                                 <label class="cta-label" for="user-name">Имя</label>
                             </div>
                             <div class="input-group">
-                                <input id="user-tel" class="cta-input" type="tel" placeholder=" ">
+                                <input 
+                                id="user-tel" 
+                                class="cta-input" 
+                                type="tel" 
+                                name="userphone" 
+                                placeholder=" " 
+                                required 
+                                maxlength="20">
                                 <label class="cta-label" for="user-tel">Номер телефона</label>
                             </div>
                         </div>
@@ -391,14 +405,28 @@
                 поможем даже в самых сложных случаях!
             </p>
 
-            <form class="modal__form" action="#">
+            <form id="form" class="modal__form" method="POST" action="handler.php">
                 <div class="input-group__vertical">
                     <div class="input-group modal__input-group">
-                        <input id="modal-user-name" class="cta-input" type="text" placeholder=" ">
+                        <input 
+                        id="modal-user-name" 
+                        class="cta-input" 
+                        type="text" 
+                        placeholder=" " 
+                        name="username" 
+                        required
+                        maxlength="50">
                         <label class="cta-label modal__label" for="modal-user-name">Имя</label>
                     </div>
                     <div class="input-group modal__input-group">
-                        <input id="modal-user-tel" class="cta-input" type="tel" placeholder=" ">
+                        <input 
+                        id="modal-user-tel" 
+                        class="cta-input" 
+                        type="tel" 
+                        placeholder=" " 
+                        name="userphone" 
+                        required
+                        maxlength="20">
                         <label class="cta-label modal__label" for="modal-user-tel">Номер телефона</label>
                     </div>
                 </div>
@@ -414,11 +442,13 @@
                         </p>
                     </div>
                 </div>
-            </form>
+            </form> 
         </div>
     </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
+    <!-- <script src="./js/just-validate.production.min.js"></script> -->
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

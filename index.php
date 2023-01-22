@@ -178,7 +178,7 @@
                     <li class="swiper-slide header-features__item">
                         <img class="header-features__img" src="images/features/1.png" alt="">
                         <p class="header-features__text">
-                            Непрерывная работа c 2017 года
+                            Непрерывная работа c 2017 года
                         </p>
                     </li>
                     <li class="swiper-slide header-features__item">
@@ -613,7 +613,7 @@
                 <img class="cta__image" src="./images/cta/bg.png" alt="call to action">
                 <div class="cta__form-wrapper container">
 
-                    <form class="cta-form" action="handler.php" method="POST">
+                    <form id="form" class="cta-form" action="handler.php" method="POST">
                         <h2 class="section-title cta-form__title">
                             Хотите сотрудничать?
                         </h2>
@@ -623,11 +623,13 @@
                         </p>
                         <div class="cta-form__input-wrapper">
                             <div class="input-group">
-                                <input id="user-name" class="cta-input" type="text" name="username" placeholder=" " required maxlength="50">
+                                <input id="user-name" class="cta-input" type="text" name="username" placeholder=" "
+                                    required maxlength="50">
                                 <label class="cta-label" for="user-name">Имя</label>
                             </div>
                             <div class="input-group">
-                                <input id="user-tel" class="cta-input" type="tel" name="userphone" placeholder=" " required maxlength="20">
+                                <input id="user-tel" class="cta-input" type="tel" name="userphone" placeholder=" "
+                                    required maxlength="20">
                                 <label class="cta-label" for="user-tel">Номер телефона</label>
                             </div>
                         </div>
@@ -669,14 +671,16 @@
                 поможем даже в самых сложных случаях!
             </p>
 
-            <form class="modal__form" action="#">
+            <form id="form" class="modal__form" method="POST" action="handler.php">
                 <div class="input-group__vertical">
                     <div class="input-group modal__input-group">
-                        <input id="modal-user-name" class="cta-input" type="text" placeholder=" ">
+                        <input id="modal-user-name" class="cta-input" type="text" placeholder=" " name="username"
+                            required maxlength="50">
                         <label class="cta-label modal__label" for="modal-user-name">Имя</label>
                     </div>
                     <div class="input-group modal__input-group">
-                        <input id="modal-user-tel" class="cta-input" type="tel" placeholder=" ">
+                        <input id="modal-user-tel" class="cta-input" type="tel" placeholder=" " name="userphone"
+                            required maxlength="20">
                         <label class="cta-label modal__label" for="modal-user-tel">Номер телефона</label>
                     </div>
                 </div>
@@ -692,11 +696,30 @@
                         </p>
                     </div>
                 </div>
-            </form> 
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-thanks">
+        <div class="modal-thanks__box">
+            <div class="modal-thanks__image">
+                <img class="modal-thanks__img" src="./images/modals/img-thanks.png"
+                    alt="картинка с девушкой, спасибо за заявку">
+            </div>
+            <h2 class="modal__title modal-thanks__title">
+                Спасибо за заявку!
+            </h2>
+            <p class="modal__text modal-thanks__text">
+                Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и
+                поможем даже в самых сложных случаях!
+            </p>
+            <a class="modal-thanks__btn button" href="index.php">Вернуться на главную</a>
         </div>
     </div>
 
     <script src="./js/swiper-bundle.min.js"></script>
+    <!-- <script src="./js/just-validate.production.min.js"></script> -->
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

@@ -1020,6 +1020,20 @@ body {
     border: 1px solid #5C8EE6;
 }
 
+input.is-invalid {
+    border: 1px solid red;
+}
+
+.just-validate-error-label {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 0.8rem;
+    display: inline-block;
+    background-color: inherit;
+    padding: 0 0.5rem;
+}
 
 .cta-form__footer {
     display: flex;
@@ -1305,6 +1319,59 @@ body {
     color: #828A99;
     max-width: 22.5rem;
 }
+
+/*modal-thanks*/
+.modal-thanks {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41, 45, 51, 0.5);
+
+    display: flex;
+
+    transition: opacity 0.2s;
+    z-index: 100000;
+}
+
+.modal-thanks.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.modal-thanks__box {
+    position: relative;
+    margin: auto;
+    max-width: 460px;
+    min-height: 690px;
+    padding: 40px 50px;
+    background-color: #fff;
+}
+
+.modal-thanks__image {
+    margin-bottom: 30px;
+    width: 360px;
+    height: 310px;
+}
+
+.modal-thanks__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-thanks__btn {
+    display: block;
+    text-align: center;
+}
+
 
 /*media*/
 
