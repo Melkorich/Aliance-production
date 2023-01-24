@@ -358,7 +358,7 @@
                             <div class="input-group">
                                 <input 
                                 id="user-tel" 
-                                class="cta-input" 
+                                class="cta-input phone-mask" 
                                 type="tel" 
                                 name="userphone" 
                                 placeholder=" " 
@@ -421,7 +421,7 @@
                     <div class="input-group modal__input-group">
                         <input 
                         id="modal-user-tel" 
-                        class="cta-input" 
+                        class="cta-input phone-mask" 
                         type="tel" 
                         placeholder=" " 
                         name="userphone" 

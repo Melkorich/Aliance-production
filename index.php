@@ -623,13 +623,25 @@
                         </p>
                         <div class="cta-form__input-wrapper">
                             <div class="input-group">
-                                <input id="user-name" class="cta-input" type="text" name="username" placeholder=" "
-                                    required maxlength="50">
+                                <input 
+                                id="user-name" 
+                                class="cta-input" 
+                                type="text" 
+                                name="username" 
+                                placeholder=" "
+                                required 
+                                maxlength="50">
                                 <label class="cta-label" for="user-name">Имя</label>
                             </div>
                             <div class="input-group">
-                                <input id="user-tel" class="cta-input" type="tel" name="userphone" placeholder=" "
-                                    required maxlength="20">
+                                <input 
+                                id="user-tel" 
+                                class="cta-input phone-mask" 
+                                type="tel" 
+                                name="userphone" 
+                                placeholder=" "
+                                required 
+                                maxlength="20">
                                 <label class="cta-label" for="user-tel">Номер телефона</label>
                             </div>
                         </div>
@@ -674,13 +686,25 @@
             <form id="form" class="modal__form" method="POST" action="handler.php">
                 <div class="input-group__vertical">
                     <div class="input-group modal__input-group">
-                        <input id="modal-user-name" class="cta-input" type="text" placeholder=" " name="username"
-                            required maxlength="50">
+                        <input 
+                        id="modal-user-name" 
+                        class="cta-input" 
+                        type="text" 
+                        placeholder=" " 
+                        name="username"
+                        required 
+                        maxlength="50">
                         <label class="cta-label modal__label" for="modal-user-name">Имя</label>
                     </div>
                     <div class="input-group modal__input-group">
-                        <input id="modal-user-tel" class="cta-input" type="tel" placeholder=" " name="userphone"
-                            required maxlength="20">
+                        <input 
+                        id="modal-user-tel" 
+                        class="cta-input phone-mask" 
+                        type="tel" 
+                        placeholder=" " 
+                        name="userphone"
+                        required 
+                        maxlength="20">
                         <label class="cta-label modal__label" for="modal-user-tel">Номер телефона</label>
                     </div>
                 </div>
