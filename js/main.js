@@ -46,15 +46,14 @@ const closeMenu = () => {
 mobileMenuBtn.addEventListener('click', (e) => {
     e.preventDefault();
     mobileMenu.classList.contains('is-open') ? closeMenu() : openMenu();
-})
+});
 
 
 const swiperHeader = new Swiper('.header-slider', {
-    grabCursor: true,
 
     navigation: {
-        nextEl: '.slider-button-next',
-        prevEl: '.slider-button-prev',
+        nextEl: '.header-slider-next',
+        prevEl: '.header-slider-prev',
     },
 
     breakpoints: {
@@ -77,6 +76,7 @@ const swiperHeader = new Swiper('.header-slider', {
         1200: {
             slidesPerView: 5,
             loop: false,
+            grabCursor: true,
         }
     }
 });
@@ -109,6 +109,37 @@ const workSchemeSlider = new Swiper('.work-cheme__slider', {
     },
 })
 
+const benefitsSlider = new Swiper('.benefits__slider', {
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1.5,
+            loop: true,
+        },
+        // when window width is >= 480px
+        560: {
+            slidesPerView: 2,
+        },
+        // when window width is >= 640px
+        800: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+        1200: {
+            slidesPerView: 5,
+            loop: false,
+            grabCursor: true,
+        }
+    },
+
+    navigation: {
+        nextEl: '.benefits-button-next',
+        prevEl: '.benefits-button-prev',
+    },
+})
+
 
 const blogSlider = new Swiper('.blog-slider', {
     grabCursor: true,
@@ -130,44 +161,66 @@ const blogSlider = new Swiper('.blog-slider', {
 
 });
 
+const blogPageSlider = new Swiper('.blog-page__slider', {
+    // slidesPerView: 2,
+    // grid: {
+    //     rows: 2,
+    // },
 
-const modal = document.querySelector('.modal');
-const modalDialog = document.querySelector('.modal__dialog');
-const modalToggle = document.querySelectorAll('[data-toggle=modal]')
-const closeModal = document.querySelector('.modal__close');
+    // spaceBetween: 30,
+    pagination: {
+        el: ".blog-page__pagination",
+        clickable: true,
+        type: 'bullets',
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
 
-document.addEventListener('click', (e) => {
-    if (
-        e.target.dataset.toggle == 'modal' ||
-        e.target.parentNode.dataset.toggle == 'modal' ||
-        !e.composedPath().includes(modalDialog) && modal.classList.contains('is-open')
-    ) {
-        e.preventDefault();
-        modal.classList.toggle('is-open');
-    }
-})
+});
+
+//modal
+let currentModal;
+let modalDialog;
 
 
-// modalToggle.forEach((el) => {
-//     el.addEventListener('click', (e) => {
-//         modal.classList.add('is-open');
-//     })
-// })
+//alert modal
+const alertModal = document.querySelector('#alert-modal');
+const modalThanks = document.querySelector('.modal-thanks');
+const modalTnanksBtn = document.querySelector('.modal-thanks__btn ');
 
-closeModal.addEventListener('click', () => {
-    modal.classList.remove('is-open');
+const modalButtons = document.querySelectorAll('[data-toggle=modal]');
+
+modalButtons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+        event.preventDefault();
+        currentModal = document.querySelector(button.dataset.target)
+        currentModal.classList.toggle('is-open')
+        modalDialog = currentModal.querySelector('.modal__dialog')
+
+        currentModal.addEventListener('click', event => {
+            if (!event.composedPath().includes(modalDialog)) {
+                currentModal.classList.remove('is-open');
+            }
+        })
+    })
 })
 
 document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-        modal.classList.remove('is-open');
+    if (event.key === 'Escape' && currentModal.classList.contains('is-open')) {
+        currentModal.classList.remove('is-open');
     }
 })
 
+const closeModal = document.querySelector('.modal__close');
 
-const modalThanks = document.querySelector('.modal-thanks');
-const modalTnahsbtn = document.querySelector('.modal-thanks__btn ');
 
+closeModal.addEventListener('click', () => {
+    currentModal.classList.remove('is-open');
+    modalTnanksBtn.addEventListener('click', () => {
+        modalThanks.classList.remove('is-open');
+    })
+})
 
 const forms = document.querySelectorAll('#form')
 
@@ -203,21 +256,26 @@ forms.forEach((form) => {
                 }).then((response) => {
                     if (response.ok) {
                         thisForm.reset();
-                        modalThanks.classList.add('is-open');
+                        currentModal.classList.remove('is-open')
+                        // modalThanks.classList.add('is-open');
+                        alertModal.classList.add('is-open');
+                        currentModal = alertModal;
+                        modalDialog = currentModal.querySelector('.modal__dialog')
+
+                        currentModal.addEventListener('click', event => {
+                            if (!event.composedPath().includes(modalDialog)) {
+                                currentModal.classList.remove('is-open');
+                            }
+                        })
                     } else {
                         alert('response.statusText')
                     }
                 });
             };
             ajaxSend(formData);
-
-
         });
 });
 
-modalTnahsbtn.addEventListener('click', () => {
-    modalThanks.classList.remove('is-open');
-})
 
 
 

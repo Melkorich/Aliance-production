@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aliance Production</title>
+    <title>
+       Aliance Production
+    </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -130,10 +132,10 @@
                 <a class="header-nav__link" href="about.php">О компании</a>
             </li>
             <li class="header-nav__item">
-                <a class="header-nav__link" href="">Контрактное производство</a>
+                <a class="header-nav__link" href="contracts.php">Контрактное производство</a>
             </li>
             <li class="header-nav__item">
-                <a class="header-nav__link" href="">Собственные торговые марки</a>
+                <a class="header-nav__link" href="trademarks.php">Собственные торговые марки</a>
             </li>
             <li class="header-nav__item">
                 <a class="header-nav__link" href="">Новости</a>
@@ -148,7 +150,7 @@
             </svg>
             <a class="header-phone__link" href="tel:+74996861014">+7 (499) 686-10-14</a>
         </div>
-        <button class="navbar__btn button" type="button" data-toggle="modal">
+        <button class="navbar__btn button" type="button" data-toggle="modal" data-target="#feedback-modal">
             <svg class="navbar__btn-icon" width="24" height="24">
                 <use href="images/sprite.svg#phone"></use>
             </svg>
@@ -161,14 +163,14 @@
             <div class="header__content">
                 <div class="separator"></div>
                 <h1 class="header__title">
-                    <?php echo "Главная страница"; ?>
+                    Главная страница
                 </h1>
                 <p class="header__text">
                     Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
                     факта: высококачественный прототип будущего проекта напрямую зависит от анализа существующих
                     паттернов поведения.
                 </p>
-                <button class="header__btn button" data-toggle="modal">
+                <button class="header__btn button" data-toggle="modal" data-target="#feedback-modal">
                     Подробнее о компании
                 </button>
             </div>
@@ -208,13 +210,13 @@
                 </ul>
 
                 <div class="slider-buttons">
-                    <div class="slider-button-prev">
-                        <svg width="36" height="24">
+                    <div class="header-slider-prev slider-button-prev">
+                        <svg class="arrow" width="36" height="24">
                             <use href='images/sprite.svg#arrow-prev'></use>
                         </svg>
                     </div>
-                    <div class="slider-button-next">
-                        <svg width="36" height="24">
+                    <div class="header-slider-next slider-button-next">
+                        <svg class="arrow" width="36" height="24">
                             <use href='images/sprite.svg#arrow-next'></use>
                         </svg>
                     </div>
@@ -225,176 +227,13 @@
 
     <main class="main">
 
-        <section class="work-cheme">
-            <div class="container">
-                <div class="separator"></div>
-                <h2 class="work-cheme__title section-title">
-                    схема работы
-                </h2>
+        <?php include_once('./template-parts/work-cheme-block.php')?>
 
-                <div class="swiper work-cheme__slider">
-                    <ol class="swiper-wrapper work-cheme__list">
-                        <li class="swiper-slide work-cheme__item">
-                            <span class="work-cheme__num">01</span>
-                            <h3 class="work-cheme__suntitle">
-                                Знакомство
-                            </h3>
-                            <p class="work-cheme__text">
-                                Безусловно, сплочённость команды профессионалов позволяет оценить значение форм
-                                воздействия.
-                            </p>
-                            <a class="work-cheme__link link" href="#">Оставить заявку</a>
-                        </li>
-                        <li class="swiper-slide work-cheme__item">
-                            <span class="work-cheme__num">02</span>
-                            <h3 class="work-cheme__suntitle">
-                                Заключение договора
-                            </h3>
-                            <p class="work-cheme__text">
-                                Лишь интерактивные прототипы призваны к ответу.
-                            </p>
-                        </li>
-                        <li class="swiper-slide work-cheme__item">
-                            <span class="work-cheme__num">03</span>
-                            <h3 class="work-cheme__suntitle">
-                                Производство
-                            </h3>
-                            <p class="work-cheme__text">
-                                А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально
-                                разнесены на независимые элементы.
-                            </p>
-                        </li>
-                        <li class="swiper-slide work-cheme__item">
-                            <span class="work-cheme__num">04</span>
-                            <h3 class="work-cheme__suntitle">
-                                Доставка
-                            </h3>
-                            <p class="work-cheme__text">
-                                В частности, экономическая повестка сегодняшнего дня говорит о возможностях
-                                приоритизации
-                                разума над эмоциями.
-                            </p>
-                        </li>
-                    </ol>
+        <?php $block_title = "Контрактное производство";
+         include_once('./template-parts/production-block.php')?>
 
-                    <div class="work-cheme__buttons primary-btn-wrapper">
-                        <div class="work-cheme-button-prev primary-btn-prev">
-                            <svg width="36" height="24">
-                                <use href="images/sprite.svg#arrow-prev"></use>
-                            </svg>
-                        </div>
-                        <div class="work-cheme-button-next primary-btn-next">
-                            <svg width="36" height="24">
-                                <use href="images/sprite.svg#arrow-next"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="production">
-            <div class="container">
-                <div class="separator"></div>
-                <h2 class="production__title section-title">
-                    Контрактное производство
-                </h2>
-
-                <div class="cards">
-                    <a class="card" href="#">
-                        <div class="card__content">
-                            <h3 class="card__title">Автомобильная химия</h3>
-                            <p class="card__text">
-                                Безусловно, сплочённость команды профессионалов позволяет оценить значение форм
-                                воздействия.
-                            </p>
-                        </div>
-                        <img class="card__image" src="./images/production/1.png" alt="">
-                    </a>
-                    <a class="card" href="#">
-                        <div class="card__content">
-                            <h3 class="card__title">Бытовая химия</h3>
-                            <p class="card__text">
-                                А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально
-                                разнесены на независимые элементы.
-                            </p>
-                        </div>
-                        <img class="card__image" src="./images/production/2.png" alt="">
-                    </a>
-                    <a class="card" href="#">
-                        <div class="card__content">
-                            <h3 class="card__title">Дезинфицирующие средства</h3>
-                            <p class="card__text">
-                                Лишь интерактивные прототипы призваны к ответу.
-                            </p>
-                        </div>
-                        <img class="card__image" src="./images/production/3.png" alt="">
-                    </a>
-                    <a class="card" href="#">
-                        <div class="card__content">
-                            <h3 class="card__title">Пищевые аэрозоли</h3>
-                            <p class="card__text">
-                                Безусловно, сплочённость команды профессионалов позволяет оценить значение форм
-                                воздействия.
-                            </p>
-                        </div>
-                        <img class="card__image" src="./images/production/3.png" alt="">
-                    </a>
-                    <a class="card" href="#">
-                        <div class="card__content">
-                            <h3 class="card__title">Косметическая продукция</h3>
-                            <p class="card__text">
-                                Лишь интерактивные прототипы призваны к ответу.
-                            </p>
-                        </div>
-                        <img class="card__image" src="./images/production/1.png" alt="">
-                    </a>
-                    <a class="card" href="#">
-                        <div class="card__content">
-                            <h3 class="card__title">Краски аэрозольные</h3>
-                            <p class="card__text">
-                                А также стремящиеся вытеснить традиционное производство, нанотехнологии функционально
-                                разнесены на независимые элементы.
-                            </p>
-                        </div>
-                        <img class="card__image" src="./images/production/2.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="trade-mark">
-            <div class="container">
-                <div class="separator"></div>
-                <h2 class="trade-mark__title section-title">
-                    собственные торговые марки
-                </h2>
-
-                <div class="trade-mark__cards">
-                    <div class="trade-mark__card">
-                        <svg class="trade-mark__logo">
-                            <use href="images/sprite.svg#agtech"></use>
-                        </svg>
-                        <h3 class="trade-mark__card-title">Автохимия AG-Tech</h3>
-                        <p class="trade-mark__card-text">
-                            Для современного мира разбавленное изрядной долей эмпатии, рациональное мышление создаёт
-                            предпосылки для поставленных обществом задач.
-                        </p>
-                    </div>
-
-                    <div class="trade-mark__card">
-                        <svg class="trade-mark__logo">
-                            <use href="images/sprite.svg#ap"></use>
-                        </svg>
-                        <h3 class="trade-mark__card-title">Автохимия AP</h3>
-                        <p class="trade-mark__card-text">
-                            Для современного мира разбавленное изрядной долей эмпатии, рациональное мышление создаёт
-                            предпосылки для поставленных обществом задач.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <?php $block_title = "Собственные торговые марки";
+        include_once('./template-parts/trademarks-block.php')?>
 
         <section class="founder">
             <div class="founder__inner">
@@ -543,7 +382,7 @@
                 </div>
 
             </div>
-        </section>
+        </section> 
 
         <section class="blog">
             <div class="container">
@@ -608,72 +447,20 @@
 
         </section>
 
-        <section class="cta">
-            <div class="cta__bg cta__inner">
-                <img class="cta__image" src="./images/cta/bg.png" alt="call to action">
-                <div class="cta__form-wrapper container">
-
-                    <form id="form" class="cta-form" action="handler.php" method="POST">
-                        <h2 class="section-title cta-form__title">
-                            Хотите сотрудничать?
-                        </h2>
-                        <p class="cta-form__text">
-                            Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие
-                            вопросы и поможем даже в самых сложных случаях!
-                        </p>
-                        <div class="cta-form__input-wrapper">
-                            <div class="input-group">
-                                <input 
-                                id="user-name" 
-                                class="cta-input" 
-                                type="text" 
-                                name="username" 
-                                placeholder=" "
-                                required 
-                                maxlength="50">
-                                <label class="cta-label" for="user-name">Имя</label>
-                            </div>
-                            <div class="input-group">
-                                <input 
-                                id="user-tel" 
-                                class="cta-input phone-mask" 
-                                type="tel" 
-                                name="userphone" 
-                                placeholder=" "
-                                required 
-                                maxlength="20">
-                                <label class="cta-label" for="user-tel">Номер телефона</label>
-                            </div>
-                        </div>
-
-                        <div class="cta-form__footer">
-                            <button class="cta__btn button" type="submit">Отправить заявку</button>
-                            <div class="cta-form__alert">
-                                <svg class="cta-icon" width="14" height="14">
-                                    <use xlink:href="images/sprite.svg#alert"></use>
-                                </svg>
-                                <p class="cta__text">
-                                    Обращаясь к нам вы получаете не только профессиональную работу, но и абсолютную
-                                    конфиденциальность информации!
-                                </p>
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </section>
+       <?= include_once('./template-parts/cta-block.php')?>
 
     </main>
 
     <?php include_once('footer.php');?>
 
-    <div class="modal">
+
+
+    <div id="feedback-modal" class="modal">
         <div class="modal__dialog">
             <h2 class="modal__title">
                 Есть вопросы?
             </h2>
-            <a class="modal__close" href="#">
+            <a class="modal__close" href="#" data-toggle="modal" data-target="#feedback-modal">
                 <svg class="close-icon" width="24" height="24">
                     <use href="images/sprite.svg#close"></use>
                 </svg>
@@ -686,25 +473,13 @@
             <form id="form" class="modal__form" method="POST" action="handler.php">
                 <div class="input-group__vertical">
                     <div class="input-group modal__input-group">
-                        <input 
-                        id="modal-user-name" 
-                        class="cta-input" 
-                        type="text" 
-                        placeholder=" " 
-                        name="username"
-                        required 
-                        maxlength="50">
+                        <input id="modal-user-name" class="cta-input" type="text" placeholder=" " name="username"
+                            required maxlength="50">
                         <label class="cta-label modal__label" for="modal-user-name">Имя</label>
                     </div>
                     <div class="input-group modal__input-group">
-                        <input 
-                        id="modal-user-tel" 
-                        class="cta-input phone-mask" 
-                        type="tel" 
-                        placeholder=" " 
-                        name="userphone"
-                        required 
-                        maxlength="20">
+                        <input id="modal-user-tel" class="cta-input phone-mask" type="tel" placeholder=" "
+                            name="userphone" required maxlength="20">
                         <label class="cta-label modal__label" for="modal-user-tel">Номер телефона</label>
                     </div>
                 </div>
@@ -724,11 +499,27 @@
         </div>
     </div>
 
-    <div class="modal-thanks">
+    <div id="alert-modal" class="modal">
+        <div class="modal__dialog">
+            <h2 class="modal__title">
+                Спасибо
+            </h2>
+            <a class="modal__close" href="#" data-target="#alert-modal">
+                <svg class="close-icon" width="24" height="24">
+                    <use href="images/sprite.svg#close"></use>
+                </svg>
+            </a>
+            <p class="modal__text">
+                Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время ответит на все интересующие вопросы и
+                поможем даже в самых сложных случаях!
+            </p>
+        </div>
+    </div>
+
+    <!-- <div class="modal-thanks">
         <div class="modal-thanks__box">
             <div class="modal-thanks__image">
-                <img class="modal-thanks__img" src="./images/modals/img-thanks.png"
-                    alt="картинка с девушкой, спасибо за заявку">
+                <img class="modal-thanks__img" src="./images/modals/img-thanks.png" alt="спасибо за заявку">
             </div>
             <h2 class="modal__title modal-thanks__title">
                 Спасибо за заявку!
@@ -739,7 +530,7 @@
             </p>
             <a class="modal-thanks__btn button" href="index.php">Вернуться на главную</a>
         </div>
-    </div>
+    </div> -->
 
     <script src="./js/swiper-bundle.min.js"></script>
     <!-- <script src="./js/just-validate.production.min.js"></script> -->
